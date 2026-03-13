@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mercury - Space Explorer</title>
+  <link rel="stylesheet" href="mercury.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">🌌 COSMOVERSE</div>
+    <a href="http://127.0.0.1:5500/index.html#" class="nav-back">← Back to Solar System</a>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="planet-image"></div>
+    <h1>☿ Mercury</h1>
+    <p>The smallest and innermost planet in our Solar System</p>
+  </div>
+
+  <div class="container">
+
+    <!-- QUICK FACTS -->
+    <h2>📋 Quick Facts</h2>
+    <table>
+      <tr><td>Distance from Sun</td><td>57.9 million km</td></tr>
+      <tr><td>Orbital Period (Year)</td><td>88 Earth days</td></tr>
+      <tr><td>Day Length</td><td>59 Earth days</td></tr>
+      <tr><td>Diameter</td><td>4,879 km</td></tr>
+      <tr><td>Max Temperature</td><td>430°C (Day side)</td></tr>
+      <tr><td>Min Temperature</td><td>−180°C (Night side)</td></tr>
+      <tr><td>Number of Moons</td><td>0</td></tr>
+      <tr><td>Gravity</td><td>3.7 m/s² (38% of Earth)</td></tr>
+    </table>
+
+    <!-- ABOUT -->
+    <h2>🪐 About Mercury</h2>
+    <p class="info">
+      Mercury is the <strong>smallest planet</strong> in our solar system and the closest to the Sun.
+      It has no atmosphere to trap heat, so temperatures swing wildly — scorching hot during the day
+      and freezing cold at night.
+    </p>
+    <p class="info">
+      Despite being closest to the Sun, Mercury is <strong>NOT the hottest planet</strong> — Venus is,
+      because it has a thick atmosphere. Mercury's surface is covered with <strong>craters</strong>,
+      just like our Moon.
+    </p>
+    <p class="info">
+      Mercury has a <strong>huge iron core</strong> that takes up 85% of its radius. Surprisingly,
+      scientists have found <strong>water ice</strong> inside permanently shadowed craters at its poles
+      that never receive sunlight.
+    </p>
+
+    
+
+    <!-- QUIZ -->
+    <h2>🧠 Mercury Quiz</h2>
+    <div class="quiz-box">
+
+      <!-- Quiz questions -->
+      <div id="quiz-area">
+        <div class="progress-text" id="progress-text">Question 1 of 5</div>
+        <div class="question" id="question-text"></div>
+        <div class="options" id="options"></div>
+        <div class="feedback-msg" id="feedback"></div>
+        <div class="quiz-controls">
+          <div class="score-text">Score: <span id="score">0</span> / <span id="answered">0</span></div>
+          <button class="btn-next" id="btn-next" onclick="nextQuestion()">Next →</button>
+        </div>
+      </div>
+
+      <!-- Result screen -->
+      <div class="result-box" id="result-box">
+        <h3 id="result-score"></h3>
+        <p id="result-msg"></p>
+        <button class="btn-restart" onclick="restartQuiz()">↺ Try Again</button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <footer>
+    🌌 Space Explorer — Mercury Page
+  </footer>
+
+  <script src="mercury.js"></script>
+</body>
+</html>
+

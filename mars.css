@@ -1,0 +1,359 @@
+/* ========================
+   RESET & BASE
+======================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #120500;
+  color: white;
+}
+
+/* ========================
+   NAVBAR
+======================== */
+nav {
+  background-color: #2a0a00;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #7a2a00;
+}
+
+nav .logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff6633;
+}
+
+nav .nav-back {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav .nav-back:hover {
+  color: white;
+}
+
+/* ========================
+   HERO SECTION
+======================== */
+.hero {
+  text-align: center;
+  padding: 50px 20px 30px;
+  background: linear-gradient(to bottom, #2a0a00, #120500);
+}
+
+.planet-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%,
+    #ff9060,
+    #cc4010 40%,
+    #882000 70%,
+    #3a0800
+  );
+  margin: 0 auto 20px;
+  box-shadow: 0 0 40px rgba(220, 80, 20, 0.5);
+}
+
+.hero h1 {
+  font-size: 48px;
+  color: #ff6633;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #aaa;
+  font-size: 16px;
+}
+
+/* ========================
+   CONTAINER
+======================== */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+/* ========================
+   HEADINGS
+======================== */
+h2 {
+  color: #ff6633;
+  border-bottom: 1px solid #3a1a00;
+  padding-bottom: 8px;
+  margin-top: 40px;
+  margin-bottom: 5px;
+}
+
+/* ========================
+   FACTS TABLE
+======================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+table td {
+  padding: 10px 15px;
+  border: 1px solid #3a1a00;
+  font-size: 15px;
+}
+
+table tr:nth-child(odd) {
+  background-color: #1e0800;
+}
+
+table tr:nth-child(even) {
+  background-color: #180600;
+}
+
+table td:first-child {
+  color: #aaa;
+  width: 40%;
+}
+
+table td:last-child {
+  color: #fff;
+}
+
+/* ========================
+   INFO PARAGRAPHS
+======================== */
+p.info {
+  line-height: 1.8;
+  color: #ccc;
+  font-size: 15px;
+  margin-top: 12px;
+}
+
+p.info strong {
+  color: #fff;
+}
+
+/* ========================
+   IMAGE GALLERY
+======================== */
+.gallery {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.gallery-img {
+  flex: 1;
+  min-width: 200px;
+  background-color: #1e0800;
+  border: 1px solid #3a1a00;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+}
+
+.img-placeholder {
+  width: 100%;
+  height: 130px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+/* Full Mars planet view */
+.img1 {
+  background: radial-gradient(circle at 38% 35%,
+    #ff9060,
+    #cc4010 35%,
+    #882000 65%,
+    #3a0800
+  );
+}
+
+/* Olympus Mons volcano */
+.img2 {
+  background: radial-gradient(circle at 50% 60%,
+    #cc5522,
+    #8a2800 40%,
+    #3a0a00 80%
+  );
+}
+
+/* Polar ice caps */
+.img3 {
+  background: linear-gradient(to bottom,
+    #ffffff,
+    #ddccbb 25%,
+    #aa5533 50%,
+    #882200 75%,
+    #3a0800
+  );
+}
+
+.gallery-img p {
+  font-size: 13px;
+  color: #aaa;
+  margin: 0;
+}
+
+/* ========================
+   QUIZ BOX
+======================== */
+.quiz-box {
+  background-color: #1e0800;
+  border: 1px solid #3a1a00;
+  border-radius: 10px;
+  padding: 25px;
+  margin-top: 15px;
+}
+
+.progress-text {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.question {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+/* ========================
+   QUIZ OPTIONS
+======================== */
+.options button {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  background-color: #180600;
+  border: 1px solid #3a1a00;
+  border-radius: 6px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.2s;
+}
+
+.options button:hover:not(:disabled) {
+  background-color: #2a0e00;
+}
+
+.options button.correct {
+  background-color: #1a4a2a;
+  border-color: #00cc66;
+  color: #00ff88;
+}
+
+.options button.wrong {
+  background-color: #4a1a1a;
+  border-color: #cc0000;
+  color: #ff4444;
+}
+
+/* ========================
+   FEEDBACK & CONTROLS
+======================== */
+.feedback-msg {
+  margin-top: 10px;
+  font-size: 14px;
+  min-height: 20px;
+  color: #aaa;
+  font-style: italic;
+}
+
+.quiz-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.score-text {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.btn-next {
+  padding: 8px 20px;
+  background-color: #ff6633;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  display: none;
+}
+
+.btn-next:hover {
+  background-color: #ff8855;
+}
+
+/* ========================
+   RESULT SCREEN
+======================== */
+.result-box {
+  display: none;
+  text-align: center;
+  padding: 30px;
+}
+
+.result-box h3 {
+  font-size: 36px;
+  color: #ff6633;
+  margin-bottom: 10px;
+}
+
+.result-box p {
+  color: #aaa;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.btn-restart {
+  padding: 10px 25px;
+  background-color: #ff6633;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-restart:hover {
+  background-color: #ff8855;
+}
+
+/* ========================
+   FOOTER
+======================== */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #555;
+  font-size: 13px;
+  border-top: 1px solid #3a1a00;
+  margin-top: 40px;
+}
+
+/* ========================
+   RESPONSIVE
+======================== */
+@media (max-width: 600px) {
+  .hero h1  { font-size: 32px; }
+  .gallery  { flex-direction: column; }
+  nav       { flex-direction: column; gap: 10px; }
+}

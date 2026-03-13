@@ -1,0 +1,183 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Space Explorer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav class="navbar">
+  <div class="nav-logo">
+    <span class="nav-logo-icon">🌌</span>
+    <span class="nav-logo-text">COSMOVERSE</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#" class="nav-link active" onclick="scrollToSection('solar-system')">Solar System</a></li>
+    <li><a href="#" class="nav-link" onclick="scrollToSection('info-box')">Planet Info</a></li>
+    <li><a href="#" class="nav-link">Gallery</a></li>
+    <li><a href="#" class="nav-link">About</a></li>
+  </ul>
+  <div class="nav-status">
+    <span class="nav-dot"></span>
+    <span id="nav-planet-label">No planet selected</span>
+  </div>
+  <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+  <h1>🌌 COSMOVERSE</h1>
+  <p>The Solar System is the gravitationally bound system of the Sun and the masses that orbit it, most prominently its eight planets, of which Earth is one. The system formed about 4.6 billion years ago when a dense region of a molecular cloud collapsed, creating the Sun and a protoplanetary disc from which the orbiting bodies assembled</p>
+  
+  <div class="solar-system">
+
+    <div class="sun"></div>
+
+    <div class="orbit mercury-orbit">
+      <div class="planet mercury" onclick="showInfo('mercury')"></div>
+      </div>
+
+    <div class="orbit venus-orbit">
+      <div class="planet venus" onclick="showInfo('venus')"></div>
+    </div>
+
+    <div class="orbit earth-orbit">
+      <div class="planet earth" onclick="showInfo('earth')"></div>
+    </div>
+
+    <div class="orbit mars-orbit">
+      <div class="planet mars" onclick="showInfo('mars')"></div>
+    </div>
+
+    <div class="orbit jupiter-orbit">
+      <div class="planet jupiter" onclick="showInfo('jupiter')"></div>
+    </div>
+
+    <div class="orbit saturn-orbit">
+      <div class="planet saturn" onclick="showInfo('saturn')"></div>
+    </div>
+
+    <div class="orbit uranus-orbit">
+      <div class="planet uranus" onclick="showInfo('uranus')"></div>
+    </div>
+
+    <div class="orbit neptune-orbit">
+      <div class="planet neptune" onclick="showInfo('neptune')"></div>
+    </div>
+
+  </div>
+   
+    <div class="planet-buttons">
+  <h3 class="buttons-title">EXPLORE PLANETS</h3>
+  <div class="btn-grid">
+    <button class="planet-btn mercury-btn" onclick="showInfo('mercury')">
+      <span class="btn-icon">⚫</span>
+      <span class="btn-name">Mercury</span>
+      <span class="btn-tag">Closest</span>
+      <a href="http://127.0.0.1:5500/mercury.html" class="btn-link">learn more</a>
+    </button>
+    <button class="planet-btn venus-btn" onclick="showInfo('venus')">
+      <span class="btn-icon">🟠</span>
+      <span class="btn-name">Venus</span>
+      <span class="btn-tag">Hottest</span>
+    </button>
+    <button class="planet-btn earth-btn" onclick="showInfo('earth')">
+      <span class="btn-icon">🔵</span>
+      <span class="btn-name">Earth</span>
+      <span class="btn-tag">Our Home</span>
+      <a href="http://127.0.0.1:5500/earth.html" class="btn-link">learn more</a>
+    </button>
+    <button class="planet-btn mars-btn" onclick="showInfo('mars')">
+      <span class="btn-icon">🔴</span>
+      <span class="btn-name">Mars</span>
+      <span class="btn-tag">Red Planet</span>
+      <a href="http://127.0.0.1:5500/mars.html" class="btn-link">learn more</a>
+    </button>
+    <button class="planet-btn jupiter-btn" onclick="showInfo('jupiter')">
+      <span class="btn-icon">🟡</span>
+      <span class="btn-name">Jupiter</span>
+      <span class="btn-tag">Largest</span>
+    </button>
+    <button class="planet-btn saturn-btn" onclick="showInfo('saturn')">
+      <span class="btn-icon">🪐</span>
+      <span class="btn-name">Saturn</span>
+      <span class="btn-tag">Ringed</span>
+    </button>
+    <button class="planet-btn uranus-btn" onclick="showInfo('uranus')">
+      <span class="btn-icon">🩵</span>
+      <span class="btn-name">Uranus</span>
+      <span class="btn-tag">Ice Giant</span>
+    </button>
+    <button class="planet-btn neptune-btn" onclick="showInfo('neptune')">
+      <span class="btn-icon">🔷</span>
+      <span class="btn-name">Neptune</span>
+      <span class="btn-tag">Farthest</span>
+    </button>
+  </div>
+</div>
+
+  <div id="info-box">
+    <h2>Planet Information</h2>
+    <p id="planet-info">Click a planet to explore!</p>
+  </div>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+
+  <div class="footer-top">
+
+    <div class="footer-brand">
+      <span class="footer-logo">🌌 COSMOVERSE</span>
+      <p class="footer-desc">
+        Explore the wonders of our Solar System. Click any planet to discover facts about each world.
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h4 class="footer-heading">Explore</h4>
+      <ul class="footer-links">
+        <li><a href="#" onclick="scrollToSection('solar-system')">Solar System</a></li>
+        <li><a href="#" onclick="scrollToSection('info-box')">Planet Info</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4 class="footer-heading">Planets</h4>
+      <ul class="footer-links">
+        <li><a href="#" onclick="showInfo('mercury')">☿ Mercury</a></li>
+        <li><a href="#" onclick="showInfo('venus')">♀ Venus</a></li>
+        <li><a href="#" onclick="showInfo('earth')">🌍 Earth</a></li>
+        <li><a href="#" onclick="showInfo('mars')">♂ Mars</a></li>
+        <li><a href="#" onclick="showInfo('jupiter')">♃ Jupiter</a></li>
+        <li><a href="#" onclick="showInfo('saturn')">♄ Saturn</a></li>
+        <li><a href="#" onclick="showInfo('uranus')">♅ Uranus</a></li>
+        <li><a href="#" onclick="showInfo('neptune')">♆ Neptune</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4 class="footer-heading">Did You Know?</h4>
+      <p class="footer-fact" id="footer-fact">Loading fact...</p>
+      <button class="footer-fact-btn" onclick="newFact()">✨ New Fact</button>
+    </div>
+
+  </div>
+
+  <div class="footer-divider"></div>
+
+  <div class="footer-bottom">
+    <p>© 2025 COSMOVERSE — Interactive Space Explorer</p>
+    <p class="footer-sub">Built for curious minds 🚀 | Data sourced from NASA</p>
+  </div>
+
+</footer>
+  <script src="script.js"></script>
+
+
+
+</body>
+</html>

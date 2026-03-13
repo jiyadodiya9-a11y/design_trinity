@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mars - Space Explorer</title>
+  <link rel="stylesheet" href="mars.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">🌌 COSMOVERSE</div>
+    <a href="http://127.0.0.1:5500/index.html#" class="nav-back">← Back to Solar System</a>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="planet-image"></div>
+    <h1>♂ Mars</h1>
+    <p>The Red Planet — the most explored planet beyond Earth</p>
+  </div>
+
+  <div class="container">
+
+    <!-- QUICK FACTS -->
+    <h2>📋 Quick Facts</h2>
+    <table>
+      <tr><td>Distance from Sun</td><td>227.9 million km</td></tr>
+      <tr><td>Orbital Period (Year)</td><td>687 Earth days</td></tr>
+      <tr><td>Day Length</td><td>24 hours 37 minutes</td></tr>
+      <tr><td>Diameter</td><td>6,779 km</td></tr>
+      <tr><td>Max Temperature</td><td>20°C (Summer equator)</td></tr>
+      <tr><td>Min Temperature</td><td>−125°C (Winter poles)</td></tr>
+      <tr><td>Number of Moons</td><td>2 (Phobos &amp; Deimos)</td></tr>
+      <tr><td>Gravity</td><td>3.7 m/s² (38% of Earth)</td></tr>
+    </table>
+
+    <!-- ABOUT -->
+    <h2>🔴 About Mars</h2>
+    <p class="info">
+      Mars is the <strong>fourth planet from the Sun</strong> and the second smallest planet in our
+      solar system. It is called the <strong>Red Planet</strong> because its surface is covered with
+      iron oxide (rust), giving it a distinctive reddish color visible from Earth with the naked eye.
+    </p>
+    <p class="info">
+      Mars has the <strong>tallest volcano</strong> in the solar system — Olympus Mons, which stands
+      21 km high, nearly three times the height of Mount Everest. It also has a massive canyon system
+      called <strong>Valles Marineris</strong>, which stretches over 4,000 km long and up to 7 km deep.
+    </p>
+    <p class="info">
+      Mars has a very <strong>thin atmosphere</strong> made mostly of carbon dioxide (95%), which means
+      it cannot support human life without equipment. However, scientists have found evidence of
+      <strong>ancient liquid water</strong> on Mars, and frozen water ice still exists at its polar caps
+      today. Mars is the most likely candidate for future human colonisation.
+    </p>
+
+    
+
+    <!-- QUIZ -->
+    <h2>🧠 Mars Quiz</h2>
+    <div class="quiz-box">
+
+      <!-- Quiz questions -->
+      <div id="quiz-area">
+        <div class="progress-text" id="progress-text">Question 1 of 5</div>
+        <div class="question" id="question-text"></div>
+        <div class="options" id="options"></div>
+        <div class="feedback-msg" id="feedback"></div>
+        <div class="quiz-controls">
+          <div class="score-text">Score: <span id="score">0</span> / <span id="answered">0</span></div>
+          <button class="btn-next" id="btn-next" onclick="nextQuestion()">Next →</button>
+        </div>
+      </div>
+
+      <!-- Result screen -->
+      <div class="result-box" id="result-box">
+        <h3 id="result-score"></h3>
+        <p id="result-msg"></p>
+        <button class="btn-restart" onclick="restartQuiz()">↺ Try Again</button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <footer>
+    🌌 Space Explorer — Mars Page
+  </footer>
+
+  <script src="mars.js"></script>
+</body>
+</html>
